@@ -5,3 +5,27 @@
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 } */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+}
+body {
+    box-sizing: border-box;
+}
+#wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    background-color: #FFF5F5;
+}
+.info{
+    flex-basis: 61.45%;
+    background: url('../images/bg-pattern-desktop.svg') no-repeat ;
+    background-size: cover;
+}

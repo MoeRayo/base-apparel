@@ -24,11 +24,10 @@ body {
 #wrapper{
     display: flex;
     justify-content: space-between;
-    flex-flow: row wrap;
+    flex-flow: row ;
     background-color: #FFF5F5;
 }
 .left-wrapper{
-    flex-basis: 61.45%;
     background: url('../images/bg-pattern-desktop.svg') no-repeat ;
     background-size: cover;
 }
@@ -42,16 +41,14 @@ header{
 .first-heading,.second-heading{
     letter-spacing: 1.2rem;
     text-transform: uppercase;
-
+    font-size: 4rem;
 }
 .first-heading{
     color: hsl(0, 36%, 70%);
     font-weight: 300;
-    font-size: 4rem;
 }
 .second-heading{
     font-weight: 600;
-    font-size: 4rem;
     color: hsl(0, 6%, 24%);
 }
 main p{
@@ -61,17 +58,43 @@ main p{
     line-height: 1.9rem;
     padding: 1.3rem 0 3rem 0;
 }
+.input-div{
+    position: relative;
+
+}
 #email{
     width: 70%;
     border-radius: 5rem;
     padding: 1rem 1.5rem;
     border: 1px solid  hsl(0, 36%, 70%);
-    background: none;
-
+    background-color: none;
 }
 #email::placeholder{
     color: hsl(0, 36%, 70%);
-    
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.error-icon{
+    position: absolute;
+    top: 13px;
+    left: 290px;
+}
+#arrow-icon{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    /* box-shadow: 5px 1px 6px 13px hsl(0, 74%, 74%); */
+    padding: .95rem 2rem;
+    border-radius: 5rem;
+    position: absolute;
+    left: 330px;
+}
+#arrow-icon:hover{
+    background: linear-gradient(135deg, hsl(0, 100%, 98%),hsl(0, 70%, 85%));
+}
+#error-text{
+    color: hsl(0, 93%, 68%);
+    margin: -1rem 0 0 2rem;
+    font-size: .8rem;
 }
 footer{
    background-color: hsl(0, 36%, 70%);
@@ -79,3 +102,218 @@ footer{
    text-align: center;
    color:#ffffff;
 }
+/* hidden items */
+.logo-mobile,.hero-mobile{
+    display: none;
+}
+
+/* Media Query */
+@media screen and (max-width:1483px) and (min-width:1416px){
+    .inner-left{
+        width: 65%;
+    }
+    main p{
+        width: 75%;
+    
+        }
+}
+@media screen and (max-width:1415px) and (min-width:1360px){
+    .inner-left{
+        width: 73%;
+    }
+    main p{
+    width: 75%;
+    }
+}
+
+@media screen and (max-width:1359px) and (min-width:1283px){
+    .inner-left{
+        width: 70%;
+    }
+    main p{
+    width: 80%;
+    }
+    #email{
+        width: 78%;
+    }
+}
+@media screen and (max-width:1282px) and (min-width:1241px){
+    .inner-left{
+        width: 70%;
+    }
+    main p{
+    width: 85%;
+    }
+     #email{
+        width: 70%;
+    }
+    .error-icon{
+        left: 230px;
+    }
+    #arrow-icon{
+        
+        left: 270px;
+    }
+}
+@media screen and (max-width:1240px) and (min-width:1070px){
+    .inner-left{
+        width: 70%;
+    }
+    main p{
+        width: 90%;
+        }
+        #email{
+            width: 78%;
+        }
+        .error-icon{
+            left: 18vw;
+        }
+        #arrow-icon{
+            
+            left: 21vw;
+        }
+
+}
+/* @media screen and (max-width:1138px) and (min-width:1070px){
+    .inner-left{
+        width: 75%;
+    }    
+    main p{
+        width: 90%;
+        }
+    main p{
+        width: 90%;
+        }
+    .error-icon{
+            left: 180px;
+        }
+    #arrow-icon{
+            left: 23vw;
+        }
+} */
+
+@media screen and (max-width:1071px) and (min-width:995px){
+    .inner-left{
+        width: 87%;
+    }
+    main p{
+    width: 95%;
+    }
+     #email{
+        width: 95%;
+    }
+    .error-icon{
+        left: 24vw;
+    }
+    #arrow-icon{
+        left: 27vw;
+    }
+    .first-heading,.second-heading{
+        letter-spacing: 1rem;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:994px){
+    #wrapper{
+        flex-flow: column-reverse;
+    }
+    .logo-desktop,.hero-desktop{
+        display: none;
+    }
+    .logo-mobile,.hero-mobile{
+        display: unset;
+    }
+    .left-wrapper{
+        background: none;
+    }
+    body{
+        text-align: center;
+
+    }
+    
+    .inner-left{
+        width: 80%;
+    }
+    .right-wrapper{
+        margin-bottom: -7rem;
+    }
+    .logo-mobile {
+                padding: 2rem 0 2rem 1rem;
+                text-align: left;
+                background-color: #ffffff;
+            }
+            .first-heading,.second-heading{
+                letter-spacing: 1.2rem;
+                text-transform: uppercase;
+                font-size: 2.2rem;
+            }
+            .first-heading{
+                color: hsl(0, 36%, 70%);
+                font-weight: 300;
+            }
+            .second-heading{
+                font-weight: 600;
+                color: hsl(0, 6%, 24%);
+            }
+            main p{
+                width: 100%;
+                font-size: .9rem;
+            }
+            #email{
+                width: 100%;
+            }
+            
+            .error-icon{
+                left: 55vw;
+            }
+            #arrow-icon{
+                padding: .95rem 1.5rem;
+
+                left: 65vw;
+            }
+            #error-text{
+                margin: -1rem 0 0 -2rem;
+            }
+            footer{
+               background-color: hsl(0, 36%, 70%);
+               padding: 1rem;
+               text-align: center;
+               color:#ffffff;
+               font-size: .8rem;
+            }
+}
+
+@media screen and (max-width:555px) and (min-width:407px){
+    #email{
+                width: 90%;
+            }
+            #arrow-icon{
+                left: 66vw;
+            }
+}
+@media screen and (max-width:700px) and (min-width:554px){
+    #email{
+                width: 70%;
+            }
+            
+            #arrow-icon{
+                left: 60vw;
+            }
+}
+@media screen and (max-width:994px) and (min-width:699px){
+    #email{
+        width: 70%;
+    }
+      .error-icon{
+                left: 58vw;
+            }
+    #arrow-icon{
+        left: 63vw;
+    }
+    main p{
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
